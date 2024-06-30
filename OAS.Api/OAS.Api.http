@@ -1,0 +1,6 @@
+@OAS.Api_HostAddress = http://localhost:5218
+
+GET {{OAS.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
