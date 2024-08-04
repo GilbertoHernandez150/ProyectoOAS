@@ -76,14 +76,14 @@ namespace OAS.Application.Service
                 return ServiceResult<PersonDto>.FailureResult("Person not found");
             }
 
-            person.FirstName = personDto.FirstName;
-            person.LastName = personDto.LastName;
-            person.DateOfBirth = personDto.DateOfBirth;
-            person.Email = personDto.Email;
-            person.PhoneNumber = personDto.PhoneNumber;
-            await _personRepository.UpdateAsync(person);
+                person.FirstName = personDto.FirstName;
+                person.LastName = personDto.LastName;
+                person.DateOfBirth = personDto.DateOfBirth;
+                person.Email = personDto.Email;
+                person.PhoneNumber = personDto.PhoneNumber;
+                await _personRepository.UpdateAsync(person);
 
-            return ServiceResult<PersonDto>.SuccessResult(personDto, "Person updated successfully");
+                return ServiceResult<PersonDto>.SuccessResult(personDto, "Person updated successfully");
         }
 
         public async Task<ServiceResult<bool>> DeletePersonAsync(int id)
